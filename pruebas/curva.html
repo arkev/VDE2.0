@@ -1,0 +1,116 @@
+<!doctype html>
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="es"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+<head>
+	<!-- ES IMPRESCIDIBLE QUE LA ETIQUETA X-UA-COMPATIBLE SEA LA PRIMERA QUE APAREZCA EN EL HEADER -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="utf-8"/>
+	
+	<title>Curva</title>
+	
+	<!-- Favicon -->
+    <!-- For iPhone 4 -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.holdworkshop.com/vde/images/apple-touch-icon.png">
+	<!-- For iPad 1-->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.holdworkshop.com/vde/images/apple-touch-icon.png">
+	<!-- For iPhone 3G, iPod Touch and Android -->
+	<link rel="apple-touch-icon-precomposed" href="http://www.holdworkshop.com/vde/images/apple-touch-icon-precomposed.png">
+	<!-- For Nokia -->
+	<link rel="shortcut icon" href="http://www.holdworkshop.com/vde/images/apple-touch-icon.png">
+	<!-- For everything else -->
+	<link rel="shortcut icon" href="http://www.holdworkshop.com/vde/http://vde.com.mx/favicon.ico">
+	<link rel="icon" href="http://www.holdworkshop.com/vde/images/favicon.gif" type="image/gif" />
+	
+	<!-- Metas -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+ 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0; target-densitydpi=160dpi;"/>
+	
+    <!--Microsoft. Delete if not required -->
+	<meta http-equiv="cleartype" content="on">
+	<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script><script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>		
+	<![endif]-->
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="../css/ie.css" type="text/css" media="screen" />
+	<![endif]-->
+    
+    <!--iOS. Delete if not required -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	
+    <!-- Estilos -->
+	<!-- The 1140px Grid -->
+	<link rel="stylesheet" href="../css/1140.css" type="text/css" media="screen" />
+	<!-- Put your layout here -->
+	<link rel="stylesheet" href="../css/layout.css" type="text/css" media="screen" />
+	<!-- Estilos generales -->
+	<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
+	
+	
+	<!-- Type and image presets - NOT ESSENTIAL -->
+	<link rel="stylesheet" href="../css/typeimg.css" type="text/css" media="screen" />
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,500,300' rel='stylesheet' type='text/css'>
+	<!-- Make minor type adjustments for 1024 monitors -->
+	<link rel="stylesheet" href="../css/smallerscreen.css" media="only screen and (max-width: 1023px)" />
+	<!-- Resets grid for mobile -->
+	<link rel="stylesheet" href="../css/mobile.css" media="handheld, only screen and (max-width: 767px)" />
+    <!--iPhone-->
+    <link rel="stylesheet" href="../css/iphone.css" media="screen and (min-device-width : 320px) and (max-device-width : 767px)"  />
+
+	<!-- All JavaScript at the bottom, except for Modernizr, Modernizr enables HTML5 elements & feature detects-->
+    <script src="../js/modernizr.js"></script>
+</head>	
+ <body onload="init()">
+   <!--<canvas id="curva" width="467" height="419"></canvas>-->
+   <object data="../images/curvas/curva.svg" type="image/svg+xml" width="480" height="445"></object>
+   <table border="0" class="control-group">
+<tbody><tr class="header-table">
+	<td><input type="checkbox" class="selAllChksInGroup"></td>
+  <td><strong>Seleccionar / desactivar todas</strong></td>
+</tr>
+<tr>
+	<td align="center"><input type="checkbox" class="case" name="case" value="1"></td>
+	<td>BlackBerry Bold 9650</td>
+</tr>
+<tr>
+	<td align="center"><input type="checkbox" class="case" name="case" value="2"></td>
+	<td>Samsung Galaxy</td>
+</tr>
+<tr>
+	<td align="center"><input type="checkbox" class="case" name="case" value="3"></td>
+	<td>Droid X</td>
+</tr>
+<tr>
+	<td align="center"><input type="checkbox" class="case" name="case" value="4"></td>
+	<td>HTC Desire</td>
+</tr>
+<tr>
+	<td align="center"><input type="checkbox" class="case" name="case" value="5"></td>
+	<td>Apple iPhone 4</td>
+</tr>
+</tbody>
+</table>
+   
+   
+   <!-- JavaScript at the bottom for fast page loading -->
+   
+<!-- Script para generar la primer curva-->
+<!-- jquery -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!-- Script para los checkbox -->
+<script>
+	$(document).on("ready", checkall);
+function checkall () 
+{
+	$("input[type=checkbox].selAllChksInGroup").on("click.chkAll", function( event ){
+    $(this).parents('.control-group:eq(0)').find(':checkbox').prop('checked', this.checked);
+});
+}
+</script>
+ </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" />
+<link href="verticalSlider.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.js"></script>
+<script src="verticalSlider.js"></script>
+
+</head>
+<body>
+<div data-role="fieldcontain" >
+	<label for="slider">Input slider:</label>
+ 	<input type="range"  value="0" min="0" max="100" step="1"/>
+ 	<div id="slider-scroll" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+<a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 45.4545%;"></a>
+</div>
+</div>
+
+<input type="range" min="0" max="100" value="25" step="5" sliderOrientation="vertical"  />
+<input type="range" min="0" max="100" value="25" step="5" sliderOrientation="verticalInverted"  />
+
+
+</body>
+</html>

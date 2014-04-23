@@ -1,0 +1,266 @@
+//variables
+@import "variab";
+
+//Mixins
+@import "mixins";
+
+.onecol {.col(4.7%);}
+.twocol {.col(13.2%);}
+.threecol {.col(22.05%);}
+.fourcol {.col(30.6%);}
+.fivecol {.col(39%);}
+.sixcol {.col(48%);}
+.sevencol {.col(56.75%);}
+.eightcol {.col(61.4%);}
+.ninecol {.col(74.05%);}
+.tencol {.col(82%);}
+.elevencol {.col(91.35%);}
+.twelvecol {.col(100%);}
+
+
+#buscador {
+    max-width:200px;
+}
+#menu {
+	a {
+	padding: 20px 0.7em 8px;
+	&:hover {.underline(3px, solid, @blanco);}
+	&:focus,&:active {background: @blanco; color:@azul-marino;padding: 20px 0.7em 16px;.underline(0, solid, @blanco);}
+	}
+}
+#produc-list #produc-desck {
+	padding: 20px 0.7em 8px;
+	&:hover {.underline(3px, solid, @blanco);}
+	&:focus,&:active {background: @blanco; color:@azul-marino;padding: 20px 0.7em 16px;.underline(0, solid, @blanco);}
+}
+.st-accordion ul li > a span {right: -10px;}
+.st-content {
+	max-width:1140px;
+	ul a:hover {margin: 15px 0 10px 10px;}
+	ul li a:hover {margin: 8px 10px;}
+}
+
+#slider {
+    max-width:1140px;
+	#slides{border:1px solid @gris-claro + 17;}
+	#shadow #left, #shadow #right {width:48%;}
+}
+
+.mod-home {
+    background:@gris-palido - 11;
+    border: 1px solid @gris-claro!important;
+    width: 30%;
+}
+#footer {
+	h2 {margin: 0 0 0 1em;}
+	hr {margin: 0;}
+}
+
+
+#col-filtros #uno, #col-filtrosSP #uno, #col-filtros #dos, #col-filtrosSP #dos {
+	display: none;
+}
+#tab-1, .tab-label-1, #tab-2, .tab-label-2, #tab-3, .tab-label-3{display: none!important;}
+.group:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;}
+
+.tabs .content {
+    border: 1px solid @gris-claro + 17; 
+	padding: 0 30px;
+	top: -25px;
+	width:87%;
+	height:1100px;
+	min-height: 200px;
+	overflow: hidden;
+	position: relative;
+	z-index: 5;
+	.box {display: none;height:1600px;max-height: 100%; overflow: inherit; display: block; position: relative; overflow-x: hidden; }   
+}
+
+#boxLinks {
+list-style: none; overflow: hidden; display: block;
+li { 
+	display: inline; 
+	.active{background: @blanco!important; color: @azul-obscuro;}
+	a { 
+		color: @blanco;
+		float: left; 
+		display: block; 
+		padding: 0 15px;
+		margin-left: 1px; 
+		position: relative; 
+		left: -1px; 
+		text-decoration: none; 
+		font-size: 14px;
+		font-weight: bold;
+		height: 40px;
+		letter-spacing: 1px;
+		line-height: 40px;
+		text-align: center;
+		text-transform: uppercase;
+		width: 108px;  
+		border: 1px solid @gris-claro + 17;
+		border-bottom:1px solid @blanco;
+		&:link, &:visited  {background:@azul-marino;}
+		&:hover {background:@azul-obscuro;}
+	}
+}
+}
+
+#nos,#nos #col-tabs,#nos #col-tabs section {height:920px;}
+
+#nos{
+	#col-tabs {
+	    .tabs{
+			.content {
+				margin: -45px 0 0 210px!important;
+				width:76%;
+				overflow: hidden; 
+				height:920px;
+				top: -170px;
+				.box {
+					overflow: auto; 
+					display: block; 
+					height:920px; 
+					position: relative; 
+					overflow-x: hidden;
+					}
+				}
+				.active {display:block;}
+				#box1:target, #box2:target, #box3:target, #box4:target, {display: block; }
+				#box { overflow: hidden;position: relative; }
+				b { 
+					position: absolute; 
+					top: 0px; 
+					right: 0px; 
+					width:1px; 
+					height: 251px; 
+					overflow: hidden; 
+					text-indent: -9999px; 
+					}
+	    }
+	}
+	#boxLinks {
+		width:210px; 
+		display: block; 
+		margin-top: 2em;
+		list-style: none; 
+		overflow: hidden;
+		li a { 
+			width:85%; 
+		    color: @azul; 
+			text-decoration: none; 
+			border: 1px solid #ccc; 
+			float: left; 
+			display: block; 
+			margin-left: -1px; 
+			position: relative; 
+			left: 1px;
+			&:link, &:visited  {background:@azul-marino;}
+			&:hover {background:@azul-obscuro!important;color: @blanco;}
+		}
+	}
+}
+
+
+
+
+#tab-4, .tab-label-4{display: none!important;}
+
+#col-esp .tabs .content {
+    height: 580px;
+    width: 78%;
+    .box{overflow: auto; width: 250px; padding: 0; margin: 0;}
+}
+
+#col-esp, #col-det, #col-tec, #col-des{background: @blanco;border: 1px solid @gris-claro + 13;}
+#sectores .mod-home {width: 21.4% !important;}
+
+.lb-album li > a span{display:none;}
+#lightbox {
+	.lb-overlay {
+			    background: url("../images/overlay.png") repeat scroll 0 0 transparent;
+			    border: 0 none;
+			    height: 100%;
+			    margin: 0 auto;
+			    padding: 20px 0 0;
+			    width: 100%;
+			    > div {
+				    height: 445px;
+				    width: 445px;
+				}
+				img {
+					-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+				    filter: alpha(opacity=99);
+				}
+				a.lb-close {
+				    top: -35px;
+				    background: @azul-marino;
+				    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+				    filter: alpha(opacity=99);
+				}
+				.info {
+				    margin: 10px auto;
+				    padding-bottom: 5em;
+				    background:@blanco;
+				}
+				div{
+				    h3 {
+				    font-size: 1.6em;
+				    height: 40px;
+				    line-height: 1em;
+				    margin-top: 6px;
+				    width: 35%;
+				    }
+				    p {
+				    font-size: 1em;
+				    height: 45px;
+				    padding: 0;
+				    width: 53%;
+				    }
+				}
+			}
+		.lb-prev, .lb-next {
+		    border: 0 none !important;
+		    bottom: 190px;
+		    top: auto;
+		}
+}
+
+.coverflow {
+	.demo {
+		.wrapper {
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bbbbbb', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+			#coverflow {
+				img {
+				border: 1px solid @gris-claro;}
+			}
+		}
+	}
+}
+.cover #marcas .bloq {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#DBDBDB',GradientType=0 ); /* IE6-9 */
+    border: 1px solid @gris!important;
+    img {display: inherit;}
+}
+#vineta {
+    height:462px!important;
+    width: 101%!important;
+}
+.box { display: none; height: 255px; overflow: auto; display: block; position: relative; overflow-x: hidden; }
+#pnuevos #col-tabs .res .info {
+    height: 140px;
+    h3 {margin: 0 0.8em 0;}
+}
+#formulario-RP {
+	input {width: 400px!important;}
+	span, small {
+		.margin(1em, 0, 1em, 180px) !important;
+	    width:300px !important;
+	}
+}
+
+#soporte-t #col-opro #tS2 .jTscrollerContainer .jTscroller .bloque img {width: 165px;max-width: 165px;}
+#soporte-t .soporte .bloqueQ .video, #soporte-t .soporte .bloqueQ .manuales, #soporte-t .soporte .bloqueQ .chat, #soporte-t .soporte .bloqueQ .foro {
+	max-width:720px;
+	background: none;
+}

@@ -1,0 +1,119 @@
+<!doctype html>
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="es"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+<head>
+<!-- ES IMPRESCIDIBLE QUE LA ETIQUETA X-UA-COMPATIBLE SEA LA PRIMERA QUE APAREZCA EN EL HEADER -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset="utf-8"/>
+  
+  <title>Responsive Tables</title>
+  
+  <!-- Put your layout here -->
+  <link rel="stylesheet" href="../css/layout.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../css/mobile.css" media="handheld, only screen and (max-width: 767px)" />
+	
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" href="stylesheets/ie.css">
+  <![endif]-->
+  
+  
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+</head>
+
+<body>
+<div id="content" role="main" class="foro">
+			<section class="row categoria">
+		<table id="foros" class="responsive">
+			<tbody><tr>
+						<th>Temas</th>
+						<th>Respuestas</th>
+						<th>Lecturas</th>
+						<th>Último mensaje</th>
+					</tr>
+					<tr>
+						<td><div class="descrip"> <a href="#"><img src="../images/document.png" alt="Foro"></a>
+		    <div class="txt"><strong><a href="#">Título del tema</a></strong><br>
+		      Nunc nunc elementum lacus aliquam nunc, nascetur rhoncus etiam adipiscing rhoncus.</div>
+		    </div></td>
+						<td>1 Respuesta</td>
+						<td>3 Lecturas</td>
+						<td> 26 Mar 2013 09:19 pm<br>
+					    Por: <a href="#">carlos_k</a></td>
+					</tr>
+					<tr>
+					  <td><div class="descrip"> <a href="#"><img src="../images/document.png" alt="Foro"></a>
+					    <div class="txt"><strong><a href="#">Título del tema</a></strong><br>
+					      Nunc nunc elementum lacus aliquam nunc, nascetur rhoncus etiam adipiscing rhoncus.</div>
+					    </div></td>
+					  <td>1 Respuesta</td>
+					  <td>3 Lecturas</td>
+					  <td> 26 Mar 2013 09:19 pm<br>
+					    Por: <a href="#">carlos_k</a></td>
+					</tr>
+					<tr>
+					  <td><div class="descrip"> <a href="#"><img src="../images/document.png" alt="Foro"></a>
+					    <div class="txt"><strong><a href="#">Título del tema</a></strong><br>
+					      Nunc nunc elementum lacus aliquam nunc, nascetur rhoncus etiam adipiscing rhoncus.</div>
+					    </div></td>
+					  <td>1 Respuesta</td>
+					  <td>3 Lecturas</td>
+					  <td> 26 Mar 2013 09:19 pm<br>
+					    Por: <a href="#">carlos_k</a></td>
+					</tr>
+					<tr>
+					  <td><div class="descrip"> <a href="#"><img src="../images/document.png" alt="Foro"></a>
+					    <div class="txt"><strong><a href="#">Título del tema</a></strong><br>
+					      Nunc nunc elementum lacus aliquam nunc, nascetur rhoncus etiam adipiscing rhoncus.</div>
+					    </div></td>
+					  <td>1 Respuesta</td>
+					  <td>3 Lecturas</td>
+					  <td> 26 Mar 2013 09:19 pm<br>
+					    Por: <a href="#">carlos_k</a></td>
+					</tr>
+		</tbody></table>
+		<div id="shadow">
+		    <div id="left"></div>
+		    <div id="right"></div>
+		</div>
+	</section>
+	<button id="ch_contrasena">Cambiar contraseña</button>
+		<div id="cambiar_contrasena" style="display:none;">
+			<label for="cur_password">Contraseña actual:</label>
+			<input type="password" name="cur_password" value="" id="cur_password">
+			<label for="new_password">Nueva contraseña:</label>
+			<input type="password" name="new_password" value="" id="new_password">
+			<label for="password_confirm">Confirmar contraseña:</label>
+			<input type="password" name="password_confirm" value="" id="password_confirm">
+		</div>
+		
+			<div class="clear"></div>
+		<!-- termina el contenido -->	
+		</div>
+
+
+<!-- jQuery -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<!-- Mostrar/ocultar cambio de contraseña -->
+<script>
+$(document).on("ready", ocultar_tabla);
+function ocultar_tabla () 
+{
+    //Aqui va todo el codigo relacionado con DOM
+    $("#ch_contrasena").on("click", mostrar_ocultar);
+}
+function mostrar_ocultar () 
+{
+    $("#cambiar_contrasena").toggle();
+} 
+</script>
+
+<!-- Tablas responsivas -->
+<script src="../js/responsive-tables.js"></script>
+	
+</body>
+</html>
